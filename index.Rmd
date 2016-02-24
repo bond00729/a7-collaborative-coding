@@ -1,0 +1,32 @@
+---
+title: "Assignment 7"
+author: Markos Mezgebu, Brandon Mar, Brendan Powers, Matthew Bond
+output: html_document
+---
+
+```{r, echo=FALSE, message=FALSE}
+source("scripts/datachart1.R")
+source("scripts/Function_Visual_2.r")
+source("scripts/summary_info.R")
+
+survey_data <- read.csv("https://raw.githubusercontent.com/INFO-498F/a7-survey-data/master/intro_survey_data.csv")
+
+# Summary
+summary_data <- info_function(survey_data)
+```
+At the beginning of the quarter we took a survey with `r summary_data$length` questions. In total `r summary_data$student_count` students took the survey. Out of those `r summary_data$student_count` students, `r summary_data$Mac_count` of them use a Mac. `r summary_data$info_prospectives` of the `r summary_data$student_count` students are prospective info majors. 
+<br>
+<br>
+
+``` {r, echo=FALSE, message=FALSE}
+# Visual 1
+build_chart()
+```
+
+<br>
+<br>
+
+``` {r, echo=FALSE, message=FALSE}
+# Visual 2
+Function_Visual_2(survey_data)
+```
