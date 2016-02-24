@@ -20,7 +20,7 @@ At the beginning of the quarter we took a survey with `r summary_data$length` qu
 
 ``` {r, echo=FALSE, message=FALSE}
 # Visual 1
-build_chart()
+build_chart(survey_data)
 ```
 
 <br>
